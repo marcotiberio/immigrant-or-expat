@@ -61,7 +61,7 @@ function blink() {
   const timeDiff = (now - _start) / 1000; //in s
   // get seconds
   const seconds = Math.round(timeDiff);
-  alert(`YOU LASTED ${seconds} SECONDS!`);
+  alert(`Do you know what you just saw?`);
   _start = new Date();
 
   if (_timeOut > -1) {
