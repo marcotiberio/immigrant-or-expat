@@ -16,34 +16,73 @@
     <link rel="stylesheet" href="style.css" />
 
     <body>
-        <section id="main">
-            <!-- <button onclick="typeWriter()">Click me</button> -->
-            <p>I wanted to use machine learning to generate fake portraits of refugees. A GAN, General Adversarial Network, is a a class of machine learning 
-            systems whose goal is to generate data from scratch, mostly images. Given a training set, this technique learns to generate new data with the same statistics as the training set.</p>
-            <p>I wanted to show the two sides of machine learning: good and evil.
-            <img src="" alt="">
-            The "good" side, the healing one, creating imagery to remember those unknown persons who lost their lives to reach a better one. 
-            The "evil" side, creating imagery to show how easy it is to trick people.</p>
-            <p>The photos I generated draw from two different datasets. The datasets are composed by images downloaded 
-            from the internet and corresponding to the tags "refugee" and "migrant".</p>
-            <p>The faces created from the two datasets hold very similar physical appearances: darker skin, young age, 
-            empty stare. Because these fake faces are based on photos taken and tagged by human beings, I realised there is a very 
-            precise and preconceived idea of what a refugee looks like. And that mostly, we tend to just mix the two terms, even 
-            if they hold a different meaning. Or is it maybe just more attention-grabbing to tag a kid from Sudan as "refugee".</p>
+        <section class="main">
+            <div class="images">
+                <div><img src="assets/pics/TIBO_0220_MEMORIAL001.jpg" alt="" style="width: 100%;"></div>
+                <div><img src="assets/pics/TIBO_0220_MEMORIAL002.jpg" alt="" style="width: 100%;"></div>
+                <div><img src="assets/pics/TIBO_0220_MEMORIAL004.jpg" alt="" style="width: 100%;"></div>
+                <div><img src="assets/pics/TIBO_0220_MEMORIAL005.jpg" alt="" style="width: 100%;"></div>
+                <div><img src="assets/pics/TIBO_0220_MEMORIAL006.jpg" alt="" style="width: 100%;"></div>
+                <div><img src="assets/pics/TIBO_0220_MEMORIAL007.jpg" alt="" style="width: 100%;"></div>
+            </div>
+            <div class="seen-them">
+                <h1>HAVE YOU SEEN THEM?</h1>
+                <div class="buttons">
+                    <button class="button-yes" onclick="showyes()">YES</button>
+                    <button class="button-yes" onclick="showno()">NO</button>
+                </div>
+            </div>          
+            
+            <div id="showyes">
+                <p>I wanted to use machine learning to generate fake portraits of refugees. A GAN, General Adversarial Network, is a a class of machine learning 
+                systems whose goal is to generate data from scratch, mostly images. Given a training set, this technique learns to generate new data with the same statistics as the training set.</p>
+                <span><div class="latent-space" style="width:20%;height:0;padding-bottom:20%;position:relative;"><iframe src="https://giphy.com/embed/WQ5L0ecAaN2g4ZYGrC" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div></span>
+                <p>I wanted to show the two sides of machine learning: good and evil.
+                The "good" side, the healing one, creating imagery to remember those unknown persons who lost their lives to reach a better one. 
+                The "evil" side, creating imagery to show how easy it is to trick people.</p>
+                <p>The photos I generated draw from two different datasets. The datasets are composed by images downloaded 
+                from the internet and corresponding to the tags "refugee" and "migrant".</p>
+                <p>The faces created from the two datasets hold very similar physical appearances: darker skin, young age, 
+                empty stare. Because these fake faces are based on photos taken and tagged by human beings, I realised there is a very 
+                precise and preconceived idea of what a refugee looks like. And that mostly, we tend to just mix the two terms, even 
+                if they hold a different meaning. Or is it maybe just more attention-grabbing to tag a kid from Sudan as "refugee".</p>
+            </div>
+            <div id="showno">
+                <p>NOOOOOOOI wanted to use machine learning to generate fake portraits of refugees. A GAN, General Adversarial Network, is a a class of machine learning 
+                systems whose goal is to generate data from scratch, mostly images. Given a training set, this technique learns to generate new data with the same statistics as the training set.</p>
+                <span><div class="latent-space" style="width:20%;height:0;padding-bottom:20%;position:relative;"><iframe src="https://giphy.com/embed/WQ5L0ecAaN2g4ZYGrC" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div></span>
+                <p>I wanted to show the two sides of machine learning: good and evil.
+                The "good" side, the healing one, creating imagery to remember those unknown persons who lost their lives to reach a better one. 
+                The "evil" side, creating imagery to show how easy it is to trick people.</p>
+                <p>The photos I generated draw from two different datasets. The datasets are composed by images downloaded 
+                from the internet and corresponding to the tags "refugee" and "migrant".</p>
+                <p>The faces created from the two datasets hold very similar physical appearances: darker skin, young age, 
+                empty stare. Because these fake faces are based on photos taken and tagged by human beings, I realised there is a very 
+                precise and preconceived idea of what a refugee looks like. And that mostly, we tend to just mix the two terms, even 
+                if they hold a different meaning. Or is it maybe just more attention-grabbing to tag a kid from Sudan as "refugee".</p>
+            </div>
         </section>
 
-    <!-- <script>
-        var i = 0;
-        var txt = 'I wanted to use an AI to generate fake portraits of refugees. I wanted to show both side of AI: the "healing" side, through which you can remember those who lost their lives to reach a better one. But also the "evil" side, showing how easy it is to trick people with fake imagery. The photos here are a creation of an AI algorythm based on two datasets. The datasets are composed by images downloaded from the internet and corresponding to the tags "refugee" and "migrant". The faces created from the two datasets hold very similar physical appearances: darker skin, young age, empty stare. Because these fake faces are based on photos taken and tagged by human beings, I realised there is a very precise and preconceived idea of what a refugee looks like. And that mostly, we tend to just mix the two terms, even if they hold a different meaning. Or is it maybe just more attention-grabbing to tag a kid from Sudan as "refugee".' ;
-        var speed = 50;
-        
-        function typeWriter() {
-            if (i < txt.length) {
-            document.getElementById("main").innerHTML += txt.charAt(i);
-            i++;
-            setTimeout(typeWriter, speed);
+        <script>
+        function showyes() {
+            var x = document.getElementById("showyes");
+            if (x.style.display === "none") {
+              x.style.display = "block";
+            } else {
+              x.style.display = "none";
             }
-        }
-    </script> -->
+          }
+
+          function showno() {
+            var x = document.getElementById("showno");
+            if (x.style.display === "none") {
+              x.style.display = "block";
+            } else {
+              x.style.display = "none";
+            }
+          }
+        </script>
+
+    
     </body>
 </html>
