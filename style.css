@@ -41,8 +41,9 @@ button:focus {
     outline: none;
 }
 
-.main {
+.header {
     width: 98vw;
+    height: 100vh;
     margin: 0;
     padding: 1%;
 
@@ -106,7 +107,7 @@ button:focus {
 }
 
 .images img {
-    border: 5px solid lime;
+    border: none;
 }
 
 @media only screen and (max-width: 900px) {
@@ -125,7 +126,7 @@ button:focus {
         border: 1px solid lime;
     }
 
-    #main {
+    .header {
         width: 98vw;
         margin: 0;
         padding: 1%;
@@ -172,6 +173,10 @@ button:focus {
         grid-row-gap: 5%;
     
         width: 97%;
+    }
+
+    .images img {
+        border: 3px solid lime;
     }
 
 }
