@@ -2,7 +2,19 @@ html, body {
     margin: 0;
     padding: 0;
 
+    font-family: 'Courier New', Courier, monospace;
+
     background-color: black;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: white !important;
 }
 
 p {
@@ -41,6 +53,61 @@ button:focus {
     outline: none;
 }
 
+/* HOME */ /* HOME */ /* HOME */
+
+#menu-icon {
+    position: fixed;
+    width: fit-content;
+    top: 1.5%;
+    right: 1.5%;
+    
+    text-align: right;
+    font-size: 3rem;
+    color: white;
+
+    cursor: pointer;
+    z-index: 100;
+}
+
+#about {
+    display: none;
+    position: absolute;
+    width: 94.5vw;
+    padding: 2%;
+
+    color: white;
+    font-size: 2rem;
+
+    background-color: black;
+    border: 10px solid white;
+}
+
+/* ABOUT */ /* ABOUT */ /* ABOUT */
+
+.latent-space {
+    width: 20%;
+    height: 0;
+    padding-bottom:2 0%;
+    position: relative;
+    border: 10px solid white; 
+    float: left; 
+    margin-bottom: 0; 
+    margin-right: 1%;
+}
+
+.images {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-gap: 1%;
+
+    width: 94%;
+}
+
+
+/* PAGE */ /* PAGE */ /* PAGE */
+
 .header {
     width: 98vw;
     height: 100vh;
@@ -75,26 +142,6 @@ button:focus {
     width: 97vw;
 }
 
-#showyes {
-    display: none;
-}
-
-#showno {
-    display: none;
-}
-
-
-.latent-space {
-    width: 20%;
-    height: 0;
-    padding-bottom:2 0%;
-    position: relative;
-    border: 10px solid lime; 
-    float: left; 
-    margin-bottom: 0; 
-    margin-right: 1%;
-}
-
 .images {
     margin: 0;
     padding: 0;
@@ -109,6 +156,8 @@ button:focus {
 .images img {
     border: none;
 }
+
+/* MOBILE */ /* MOBILE */ /* MOBILE */
 
 @media only screen and (max-width: 900px) {
 

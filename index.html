@@ -32,8 +32,36 @@
   </head>
 
   <body data-gr-c-s-loaded="true">
+    <div class="menu">
+      <div id="menu-icon">X</div>
+    </div>
     <div id="canvas_container" style="left: 0px;">
       <canvas id="the_canvas" width="1440" height="496"></canvas>
+    </div>
+
+    <div id="about">
+        <p>I wanted to use machine learning to generate fake portraits of refugees. A GAN, General Adversarial Network, is a a class of machine learning 
+        systems whose goal is to generate data from scratch, mostly images. Given a training set, this technique learns to generate new data with the same statistics as the training set.</p>
+        <span><div class="latent-space" style="width:20%;height:0;padding-bottom:20%;position:relative;"><iframe src="https://giphy.com/embed/WQ5L0ecAaN2g4ZYGrC" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div></span>
+        <p>I wanted to show the two sides of machine learning: good and evil.
+        The "good" side, the healing one, creating imagery to remember those unknown persons who lost their lives to reach a better one. 
+        The "evil" side, creating imagery to show how easy it is to trick people.</p>
+        <p>The photos I generated draw from two different datasets. The datasets are composed by images downloaded 
+        from the internet and corresponding to the tags "refugee" and "migrant".</p>
+        <p>The faces created from the two datasets hold very similar physical appearances: darker skin, young age, 
+        empty stare. Because these fake faces are based on photos taken and tagged by human beings, I realised there is a very 
+        precise and preconceived idea of what a refugee looks like. And that mostly, we tend to just mix the two terms, even 
+        if they hold a different meaning. Or is it maybe just more attention-grabbing to tag a kid from Sudan as "refugee".</p>
+        <p>This experiment was made possible thanks to <a href="https://runwayml.com/" target="_blank">Runway ML</a>.</p>
+
+        <div class="images">
+          <div><img src="assets/pics/TIBO_0220_MEMORIAL001.jpg" alt="" style="width: 100%;"></div>
+          <div><img src="assets/pics/TIBO_0220_MEMORIAL002.jpg" alt="" style="width: 100%;"></div>
+          <div><img src="assets/pics/TIBO_0220_MEMORIAL004.jpg" alt="" style="width: 100%;"></div>
+          <div><img src="assets/pics/TIBO_0220_MEMORIAL005.jpg" alt="" style="width: 100%;"></div>
+          <div><img src="assets/pics/TIBO_0220_MEMORIAL006.jpg" alt="" style="width: 100%;"></div>
+          <div><img src="assets/pics/TIBO_0220_MEMORIAL007.jpg" alt="" style="width: 100%;"></div>
+        </div>
     </div>
 
     <div id="assets">
@@ -64,5 +92,10 @@
     <script src="js/utils/BRFv4PointUtils.js"></script>
     <script src="js/BRFv4DemoMinimalWebcam.js"></script>
     <script src="index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+    <script>
+      $("#menu-icon").click( function() { $("#about").toggle(); } );
+    </script>
   </body>
 </html>
