@@ -16,9 +16,32 @@
     <link rel="stylesheet" href="style.css" />
 
     <body>
-        <section class="main">
-            I wanted to use AI to generate fake portraits of refugees, 
-            but I realized that people have clear preconceived ideas of what refugees are.
+        <section id="main">
+            <!-- <button onclick="typeWriter()">Click me</button> -->
+            I wanted to use an AI to generate fake portraits of refugees. I wanted to show both side of AI: the "healing" side, 
+            through which you can remember those who lost their lives to reach a better one. But also the "evil" side, showing 
+            how easy it is to trick people with fake imagery. 
+            <br>The photos here are a creation of an AI algorythm based on two 
+            datasets. The datasets are composed by images downloaded from the internet and corresponding to the tags "refugee" 
+            and "migrant". 
+            <br>The faces created from the two datasets hold very similar physical appearances: darker skin, young age, 
+            empty stare. Because these fake faces are based on photos taken and tagged by human beings, I realised there is a very 
+            precise and preconceived idea of what a refugee looks like. And that mostly, we tend to just mix the two terms, even 
+            if they hold a different meaning. Or is it maybe just more attention-grabbing to tag a kid from Sudan as "refugee".
         </section>
+
+    <!-- <script>
+        var i = 0;
+        var txt = 'I wanted to use an AI to generate fake portraits of refugees. I wanted to show both side of AI: the "healing" side, through which you can remember those who lost their lives to reach a better one. But also the "evil" side, showing how easy it is to trick people with fake imagery. The photos here are a creation of an AI algorythm based on two datasets. The datasets are composed by images downloaded from the internet and corresponding to the tags "refugee" and "migrant". The faces created from the two datasets hold very similar physical appearances: darker skin, young age, empty stare. Because these fake faces are based on photos taken and tagged by human beings, I realised there is a very precise and preconceived idea of what a refugee looks like. And that mostly, we tend to just mix the two terms, even if they hold a different meaning. Or is it maybe just more attention-grabbing to tag a kid from Sudan as "refugee".' ;
+        var speed = 50;
+        
+        function typeWriter() {
+            if (i < txt.length) {
+            document.getElementById("main").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+            }
+        }
+    </script> -->
     </body>
 </html>

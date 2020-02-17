@@ -1,11 +1,29 @@
 html, body {
     margin: 0;
     padding: 0;
-}
-
-main {
-    width: 100vw;
-    height: 100vh;
 
     background-color: black;
+}
+
+#main {
+    width: 98vw;
+    margin: 0;
+    padding: 1%;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2em;
+    display: inline-block;
+
+    background-color: black;
+    color: lime;
+}
+
+button {
+    margin-left: 1%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.5em;
+
+    color: lime;
+    background-color: black;
+    border: 1px solid lime;
 }
