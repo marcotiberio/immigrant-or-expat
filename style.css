@@ -5,6 +5,20 @@ html, body {
     background-color: black;
 }
 
+p {
+    margin-block-start: 1em;
+}
+
+button {
+    margin-left: 1%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.5em;
+
+    color: lime;
+    background-color: black;
+    border: 1px solid lime;
+}
+
 #main {
     width: 98vw;
     margin: 0;
@@ -16,14 +30,4 @@ html, body {
 
     background-color: black;
     color: lime;
-}
-
-button {
-    margin-left: 1%;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 0.5em;
-
-    color: lime;
-    background-color: black;
-    border: 1px solid lime;
 }
