@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+
+  <head class="gr_howlongcanyoula.st">
+    <!-- howlongcanyoula.st -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>⏳ How long can you last? ⏳</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+
+    <style>
+      #canvas_container {
+        background-color: black;
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+      }
+
+      #assets {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body data-gr-c-s-loaded="true">
+    <div id="canvas_container" style="left: 0px;">
+      <canvas id="the_canvas" width="1440" height="496"></canvas>
+    </div>
+
+    <div id="assets">
+      <img id="pic0" src="assets/pics/TIBO_0220_000000037 copy.jpg" />
+      <img id="pic1" src="assets/pics/TIBO_0220_000000011 copy.jpg" />
+      <img id="pic2" src="assets/pics/TIBO_0120_Memorial-2-0 - January 10th 2020 at 9.51.20 AM copy.jpg" />
+      <img id="pic3" src="assets/pics/Memorial-2-0 - January 10th 2020 at 9.53.11 AM.JPG" />
+      <img id="pic4" src="assets/pics/TIBO_0220_000000040.jpg" />
+      <img id="pic5" src="assets/pics/TIBO_0220_000000037 copy.jpg" />
+      <img id="pic6" src="assets/pics/TIBO_0220_000000039.jpg" />
+      <!-- <img id="pic7" src="assets/pics/test/7.png" />
+      <img id="pic8" src="assets/pics/test/8.jpg" />
+      <img id="pic9" src="assets/pics/test/9.jpg" />
+      <img id="pic10" src="assets/pics/test/10.jpg" />
+      <img id="pic11" src="assets/pics/test/11.jpg" />
+      <img id="pic12" src="assets/pics/test/12.jpg" />
+      <img id="pic13" src="assets/pics/test/13.jpg" />
+      <img id="pic14" src="assets/pics/test/14.jpg" />
+      <img id="pic15" src="assets/pics/test/15.jpg" />
+      <img id="pic16" src="assets/pics/test/16.png" /> -->
+    </div>
+
+    <video id="_webcam" style="display: none;" playsinline></video>
+    <canvas
+      id="_imageData"
+      style="position: absolute; z-index: -999; opacity: 0;"
+    ></canvas>
+
+    <script>
+      var brfv4 = {};
+    </script>
+    <script src="js/utils/BRFv4PointUtils.js"></script>
+    <script src="js/BRFv4DemoMinimalWebcam.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
