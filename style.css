@@ -72,14 +72,14 @@ button:focus {
 #about {
     display: none;
     position: absolute;
-    width: 95vw;
+    width: 96vw;
     padding: 2%;
 
     color: white;
     font-size: 2rem;
 
     background-color: black;
-    border: 10px solid white;
+    /* border: 10px solid white; */
 }
 
 /* ABOUT */ /* ABOUT */ /* ABOUT */
