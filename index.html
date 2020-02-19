@@ -1,101 +1,90 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js">
-  <!--<![endif]-->
+<!DOCTYPE html PUBLIC">
+<html>
+<head>
+<title>Immigrant or expat?</title>
+<link rel="stylesheet" href="style.css">
 
-  <head class="gr_howlongcanyoula.st">
-    <!-- howlongcanyoula.st -->
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Memorial</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="style.css" />
+<script type = "text/Javascript">
+var rimg = 0;
+var pictures = [ "assets/pics/TIBO_0220_MEMORIAL001", "assets/pics/testexpat007"];
+function randpics(){
+// pick a random image from the pictures array and displays by
+// creating an img tag and appending the src attribute to the filename
+  rimg = Math.floor(Math.random() * 2);
+  document.getElementById('photo').src = pictures[rimg]+'.jpg';
+// remove following when images are available
+  document.getElementById('photo').alt = rimg + ' : ' +pictures[rimg]+'.jpg';
+}
+function getRBtnName(GrpName) {
+  var sel = document.getElementsByName(GrpName);
+  var fnd = -1;
+  var str = '';
+  for (var i=0; i<sel.length; i++) {
+    if (sel[i].checked == true) { str = sel[i].value;  fnd = i; }
+  }
+  return fnd;   // return option index of selection
+// comment out next line if option index used in line above 
+//  return str;
+}
+function checkAnswers() {
+  var choice = getRBtnName('radiobutton');
+  var flag = false;
+  if (choice == rimg) { flag = false; alert( "Congratulations, your answer is correct! Now you can generate your own immigrants and expats!" );
+                        document.location.href="https://marcotiberio.github.io/memorial/generate"; }
+                 else { alert('Wrong! Now you can generate your own immigrants and expats so you can learn the difference!'); }
+                 document.location.href="https://marcotiberio.github.io/memorial/generate";
+  return flag;
+} // end function checkAnswers
 
-    <style>
-      #canvas_container {
-        background-color: black;
-        position: fixed;
-        left: 0px;
-        top: 0px;
-        width: 100%;
-        height: 100%;
-      }
 
-      #assets {
-        display: none;
-      }
-    </style>
-  </head>
+</script>
+</head>
 
-  <body data-gr-c-s-loaded="true">
-    <div class="menu">
-      <div id="menu-icon">X</div>
+<body onload="randpics()">
+
+<form id="myQuiz" onsubmit = "return checkAnswers()" action = "">
+    <div>
+        <img id="photo" src="" alt="mystery photo" style="width: 100%;"/>
     </div>
-    <div id="canvas_container" style="left: 0px;">
-      <canvas id="the_canvas" width="1440" height="496"></canvas>
-    </div>
-
-    <div id="about">
-        <p>I wanted to use machine learning to generate fake portraits of refugees. A GAN, General Adversarial Network, is a a class of machine learning 
-        systems whose goal is to generate data from scratch, mostly images. Given a training set, this technique learns to generate new data with the same statistics as the training set.</p>
-        <span><div class="latent-space" style="width:20%;height:0;padding-bottom:20%;position:relative;"><iframe src="https://giphy.com/embed/WQ5L0ecAaN2g4ZYGrC" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div></span>
-        <p>I wanted to show the two sides of machine learning: good and evil.
-        The "good" side, the healing one, creating imagery to remember those unknown persons who lost their lives to reach a better one. 
-        The "evil" side, creating imagery to show how easy it is to trick people.</p>
-        <p>The photos I generated draw from two different datasets. The datasets are composed by images downloaded 
-        from Instagram and Flickr and corresponding to the tags "refugee" and "migrant".</p>
-        <p>The faces created from the two datasets hold very similar physical appearances: darker skin, young age, 
-        empty stare. Because these fake faces are based on photos taken and tagged by human beings, I realised there is a very 
-        precise and preconceived idea of what a refugee looks like. And that mostly, we tend to just mix the two terms, even 
-        if they hold a different meaning. Or is it maybe just more attention-grabbing to tag a kid from Sudan as "refugee".</p>
-        <p>This experiment was made possible thanks to <a href="https://runwayml.com/" target="_blank">Runway ML</a>.</p>
-
-        <div class="images">
-          <div><img src="assets/pics/TIBO_0220_MEMORIAL001.jpg" alt="" style="width: 100%;"></div>
-          <div><img src="assets/pics/TIBO_0220_MEMORIAL002.jpg" alt="" style="width: 100%;"></div>
-          <div><img src="assets/pics/TIBO_0220_MEMORIAL004.jpg" alt="" style="width: 100%;"></div>
-          <div><img src="assets/pics/TIBO_0220_MEMORIAL005.jpg" alt="" style="width: 100%;"></div>
-          <div><img src="assets/pics/TIBO_0220_MEMORIAL006.jpg" alt="" style="width: 100%;"></div>
-          <div><img src="assets/pics/TIBO_0220_MEMORIAL007.jpg" alt="" style="width: 100%;"></div>
+    <div class="answers">
+        <div></div>
+        <div>
+            <h2>Please choose what it seems more appropriate</h2>
         </div>
+        <div class="button-input">
+            <button>
+                <label for="TIBO_0220_MEMORIAL001">
+                    <input id="TIBO_0220_MEMORIAL001" type="radio" name="radiobutton" value="TIBO_0220_MEMORIAL001" />
+                    IMMIGRANT
+                </label>
+            </button>
+        </div>
+        <div class="button-input">
+            <button>
+                <label for="testexpat007">
+                    <input id="testexpat007" type="radio" name="radiobutton" value="testexpat007" />
+                    <input id="testexpat007" type="radio" name="radiobutton" value="testexpat007" />
+                    EXPAT
+                </label>
+            </button>
+        </div>
+        <!-- <input type = "radio" name = "radiobutton" value = "PERF" />
+        <label>Performance Tip</label>
+        <input type = "radio" name = "radiobutton" value = "PORT" />
+        <label>Portability Tip</label><br />
+        <input type = "radio" name = "radiobutton" value = "SEO" />
+        <label>Software engineering observation</label>
+        <input type = "radio" name = "radiobutton" value = "GUI" />
+        <label>graphical user interface</label>
+        <input type = "radio" name = "radiobutton" value = "GPP" />
+        <label>Good programming practice</label><br /> -->
+        <!-- <div>
+            <input id="submit" type = "submit" name = "submit" value = "Submit" />
+            <input type = "reset" name = "reset" value = "Reset" />
+        </div> -->
     </div>
-
-    <div id="assets">
-      <img id="pic1" src="assets/pics/TIBO_0220_MEMORIAL001.jpg" />
-      <img id="pic2" src="assets/pics/TIBO_0220_MEMORIAL002.jpg" />
-      <img id="pic4" src="assets/pics/TIBO_0220_MEMORIAL004.jpg" />
-      <img id="pic5" src="assets/pics/TIBO_0220_MEMORIAL005.jpg" />
-      <img id="pic6" src="assets/pics/TIBO_0220_MEMORIAL006.jpg" />
-      <img id="pic6" src="assets/pics/TIBO_0220_MEMORIAL007.jpg" />
-      <img id="pic8" src="assets/pics/TIBO_0220_MEMORIAL008.jpeg" />
-      <img id="pic9" src="assets/pics/TIBO_0220_MEMORIAL009.JPG" />
-      <img id="pic10" src="assets/pics/TIBO_0220_MEMORIAL010.jpg" />
-      <img id="pic11" src="assets/pics/TIBO_0220_MEMORIAL011.jpg" />
-      <img id="pic12" src="assets/pics/TIBO_0220_MEMORIAL012.jpg" />
-      <img id="pic13" src="assets/pics/TIBO_0220_MEMORIAL013.jpg" />
-      <img id="pic14" src="assets/pics/TIBO_0220_MEMORIAL014.jpg" />
-    </div>
-
-    <video id="_webcam" style="display: none;" playsinline></video>
-    <canvas
-      id="_imageData"
-      style="position: absolute; z-index: -999; opacity: 0;"
-    ></canvas>
-
-    <script>
-      var brfv4 = {};
-    </script>
-    <script src="js/utils/BRFv4PointUtils.js"></script>
-    <script src="js/BRFv4DemoMinimalWebcam.js"></script>
-    <script src="index.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-
-    <script>
-      $("#menu-icon").click( function() { $("#about").toggle(); } );
-    </script>
-  </body>
+   
+   
+</form>
+</body>
 </html>
