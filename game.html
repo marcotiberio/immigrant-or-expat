@@ -24,62 +24,87 @@
                 <!-- <img src="assets/pics/TIBO_0220_MEMORIAL001.jpg" alt="" style="width: 100%;"> -->
             </div>
             <div class="buttons">
-                <button class="buttongame" id="left" onClick="pickimg();return false;">MIGRANT</button>
-                <button class="buttongame" id="right" onClick="pickimg();return false;">EXPAT</button>
+                <button class="buttongame" id="left" onClick="pickimgimmigrant();return false;">IMMIGRANT</button>
+                <button class="buttongame" id="right" onClick="pickimgexpat();return false;">EXPAT</button>
             </div>
         </section>
 
         <div id="about">
-            <p>I wanted to use machine learning to generate fake portraits of refugees. A GAN, General Adversarial Network, is a a class of machine learning 
-            systems whose goal is to generate data from scratch, mostly images. Given a training set, this technique learns to generate new data with the same statistics as the training set.</p>
-            <span><div class="latent-space" style="width:20%;height:0;padding-bottom:20%;position:relative;"><iframe src="https://giphy.com/embed/WQ5L0ecAaN2g4ZYGrC" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div></span>
-            <p>I wanted to show the two sides of machine learning: good and evil.
-            The "good" side, the healing one, creating imagery to remember those unknown persons who lost their lives to reach a better one. 
-            The "evil" side, creating imagery to show how easy it is to trick people.</p>
-            <p>The faces created from the two datasets hold very similar physical appearances: darker skin, young age, 
-            empty stare. Because these fake faces are based on photos taken and tagged by human beings, I realised there is a very 
-            precise and preconceived idea of what a refugee looks like. And that mostly, we tend to just mix the two terms, even 
-            if they hold a different meaning. Or is it maybe just more attention-grabbing to tag a kid from Sudan as "refugee".</p>
+            <p>What is the power of language? Why do we choose a word instead of another? How does media affect 
+            our perception of these different words with same meaning? And how inconsciously racist are we
+            when we choose a word over another?</p>
+            <!-- <span><div class="latent-space" style="width:20%;height:0;padding-bottom:20%;position:relative;"><iframe src="https://giphy.com/embed/WQ5L0ecAaN2g4ZYGrC" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div></span> -->
+            <p>This game is an artistic project that wants to underline how society, media and our own experience of the world
+            shapes our mind.<br>
+            If I say "John is a migrant" or "John is an expat" how do you picture John in your head? Does he look the same?</p>
+            <p>The faces I present here are not real. They are the creation of a machine learning model. They have been 
+            generated drawing from two different datasets of portraits. In one dataset the people portaied were tagged as "immigrant", 
+            while in the other one as "expat". 
+            We might say that the machine that generated these images is as biased as human beings.</p>
             <p>This experiment was made possible thanks to <a href="https://runwayml.com/" target="_blank">Runway ML</a>.</p>
+            <br><br><br>
+            <hr>
+            <div class="footer">
+                <div id="terms" style="display: none;">
+                    <div>
+                        <h4>Expat</h4>
+                        <p>A person living in a country that is not their own.</p>
+                    </div>
+                    <div>
+                        <h4>Immigrant</h4>
+                        <p>​A person who has come to live permanently in a country that is not their own.</p>
+                    </div>
+                </div>
+                <u id="definitions" style="cursor: pointer;">Definitions</u>
+            </div>
     
-            <div class="images">
+            <!-- <div class="images">
               <div><img src="assets/pics/TIBO_0220_MEMORIAL001.jpg" alt="" style="width: 100%;"></div>
               <div><img src="assets/pics/TIBO_0220_MEMORIAL002.jpg" alt="" style="width: 100%;"></div>
               <div><img src="assets/pics/TIBO_0220_MEMORIAL004.jpg" alt="" style="width: 100%;"></div>
               <div><img src="assets/pics/TIBO_0220_MEMORIAL005.jpg" alt="" style="width: 100%;"></div>
               <div><img src="assets/pics/TIBO_0220_MEMORIAL006.jpg" alt="" style="width: 100%;"></div>
               <div><img src="assets/pics/TIBO_0220_MEMORIAL007.jpg" alt="" style="width: 100%;"></div>
-            </div>
-        </div>
+            </div> -->
 
         <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 
         <script>
-            function pickimg(){
-            var imagenumber = 15 ;
+            function pickimgimmigrant(){
+            var imagenumber = 13 ;
             var randomnumber = Math.random() ;
             var rand1 = Math.round( (imagenumber-1) * randomnumber) + 1;
             images = new Array
             images[1] = "assets/pics/TIBO_0220_MEMORIAL001.jpg"
-            images[2] = "assets/pics/testexpat001.JPG"
-            images[3] = "assets/pics/TIBO_0220_MEMORIAL002.jpg"
-            images[4] = "assets/pics/testexpat002.PNG"
-            images[5] = "assets/pics/TIBO_0220_MEMORIAL004.jpg"
-            images[6] = "assets/pics/testexpat003.JPG"
-            images[7] = "assets/pics/TIBO_0220_MEMORIAL005.jpg"
-            images[8] = "assets/pics/testexpat004.JPG"
-            images[9] = "assets/pics/TIBO_0220_MEMORIAL006.jpg"
-            images[10] = "assets/pics/testexpat005.JPG"
-            images[11] = "assets/pics/TIBO_0220_MEMORIAL007.jpg"
-            images[12] = "assets/pics/testexpat006.JPG"
-            images[13] = "assets/pics/TIBO_0220_MEMORIAL008.jpeg"
-            images[14] = "assets/pics/testexpat007.JPG"
-            images[15] = "assets/pics/TIBO_0220_MEMORIAL009.JPG"
-            // images[9] = "assets/pics/TIBO_0220_MEMORIAL010.jpg"
-            // images[10] = "assets/pics/TIBO_0220_MEMORIAL011.jpg"
-            // images[11] = "assets/pics/TIBO_0220_MEMORIAL012.jpg"
-            // images[12] = "assets/pics/TIBO_0220_MEMORIAL013.jpg"
-            // images[13] = "assets/pics/TIBO_0220_MEMORIAL014.jpg"
+            images[2] = "assets/pics/TIBO_0220_MEMORIAL002.jpg"
+            images[3] = "assets/pics/TIBO_0220_MEMORIAL004.jpg"
+            images[4] = "assets/pics/TIBO_0220_MEMORIAL005.jpg"
+            images[5] = "assets/pics/TIBO_0220_MEMORIAL006.jpg"
+            images[6] = "assets/pics/TIBO_0220_MEMORIAL007.jpg"
+            images[7] = "assets/pics/TIBO_0220_MEMORIAL008.jpeg"
+            images[8] = "assets/pics/TIBO_0220_MEMORIAL009.JPG"
+            images[9] = "assets/pics/TIBO_0220_MEMORIAL010.jpg"
+            images[10] = "assets/pics/TIBO_0220_MEMORIAL011.jpg"
+            images[11] = "assets/pics/TIBO_0220_MEMORIAL012.jpg"
+            images[12] = "assets/pics/TIBO_0220_MEMORIAL013.jpg"
+            images[13] = "assets/pics/TIBO_0220_MEMORIAL014.jpg"
+            var image = images[rand1]
+            document.randimg.src = image
+            }
+        </script>
+        <script>
+            function pickimgexpat(){
+            var imagenumber = 7 ;
+            var randomnumber = Math.random() ;
+            var rand1 = Math.round( (imagenumber-1) * randomnumber) + 1;
+            images = new Array
+            images[1] = "assets/pics/testexpat001.JPG"
+            images[2] = "assets/pics/testexpat002.PNG"
+            images[3] = "assets/pics/testexpat003.JPG"
+            images[4] = "assets/pics/testexpat004.JPG"
+            images[5] = "assets/pics/testexpat005.JPG"
+            images[6] = "assets/pics/testexpat006.JPG"
+            images[7] = "assets/pics/testexpat007.JPG"
             var image = images[rand1]
             document.randimg.src = image
             }
@@ -87,6 +112,7 @@
 
         <script>
             $("#menu-icon").click( function() { $("#about").toggle(); } );
+            $("#definitions").click( function() { $("#terms").toggle(); } );
         </script>
 
     
