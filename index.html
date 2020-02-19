@@ -2,6 +2,8 @@
 <html>
 <head>
 <title>Immigrant or expat?</title>
+<!-- Place your kit's code here -->
+<script src="https://kit.fontawesome.com/94ceef780c.js" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="style.css">
 
 <script type = "text/Javascript">
@@ -10,7 +12,7 @@ var pictures = [ "assets/pics/TIBO_0220_MEMORIAL001", "assets/pics/testexpat007"
 function randpics(){
 // pick a random image from the pictures array and displays by
 // creating an img tag and appending the src attribute to the filename
-  rimg = Math.floor(Math.random() * 2);
+  rimg = Math.floor(Math.random() +1);
   document.getElementById('photo').src = pictures[rimg]+'.jpg';
 // remove following when images are available
   document.getElementById('photo').alt = rimg + ' : ' +pictures[rimg]+'.jpg';
