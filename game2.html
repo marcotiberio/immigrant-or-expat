@@ -10,7 +10,7 @@ var pictures = [ "assets/pics/TIBO_0220_MEMORIAL001", "assets/pics/testexpat007"
 function randpics(){
 // pick a random image from the pictures array and displays by
 // creating an img tag and appending the src attribute to the filename
-  rimg = Math.floor(Math.random() * 3);
+  rimg = Math.floor(Math.random() * 2);
   document.getElementById('photo').src = pictures[rimg]+'.jpg';
 // remove following when images are available
   document.getElementById('photo').alt = rimg + ' : ' +pictures[rimg]+'.jpg';
@@ -29,11 +29,14 @@ function getRBtnName(GrpName) {
 function checkAnswers() {
   var choice = getRBtnName('radiobutton');
   var flag = false;
-  if (choice == rimg) { flag = true; alert( "Congratulations, your answer is correct! Now you can generate your own immigrants and expats!" ); }
+  if (choice == rimg) { flag = false; alert( "Congratulations, your answer is correct! Now you can generate your own immigrants and expats!" );
+                        document.location.href="https://marcotiberio.github.io/memorial/game"; }
                  else { alert('Wrong! Now you can generate your own immigrants and expats so you can learn the difference!'); }
                  document.location.href="https://marcotiberio.github.io/memorial/game";
   return flag;
 } // end function checkAnswers
+
+
 </script>
 </head>
 
