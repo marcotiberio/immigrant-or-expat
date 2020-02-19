@@ -11,7 +11,7 @@ var pictures = [ "assets/pics/TIBO_0220_MEMORIAL001", "assets/pics/testexpat007"
 function randpics(){
 // pick a random image from the pictures array and displays by
 // creating an img tag and appending the src attribute to the filename
-  rimg = Math.floor(Math.random() +1);
+  rimg = Math.floor(Math.random() * 2);
   document.getElementById('photo').src = pictures[rimg]+'.jpg';
 // remove following when images are available
   document.getElementById('photo').alt = rimg + ' : ' +pictures[rimg]+'.jpg';
@@ -31,9 +31,9 @@ function checkAnswers() {
   var choice = getRBtnName('radiobutton');
   var flag = false;
   if (choice == rimg) { flag = false; alert( "Congratulations, your answer is correct! Now you can generate your own immigrants and expats!" );
-                        // document.location.href="https://marcotiberio.github.io/immigrant-or-expat/generate"; }
+                        document.location.href="https://marcotiberio.github.io/immigrant-or-expat/generate"; }
                  else { alert('Wrong! Now you can generate your own immigrants and expats so you can learn the difference!'); }
-                //  document.location.href="https://marcotiberio.github.io/immigrant-or-expat/generate";
+                document.location.href="https://marcotiberio.github.io/immigrant-or-expat/generate";
   return flag;
 } // end function checkAnswers
 
@@ -68,20 +68,6 @@ function checkAnswers() {
                 </label>
             </button>
         </div>
-        <!-- <input type = "radio" name = "radiobutton" value = "PERF" />
-        <label>Performance Tip</label>
-        <input type = "radio" name = "radiobutton" value = "PORT" />
-        <label>Portability Tip</label><br />
-        <input type = "radio" name = "radiobutton" value = "SEO" />
-        <label>Software engineering observation</label>
-        <input type = "radio" name = "radiobutton" value = "GUI" />
-        <label>graphical user interface</label>
-        <input type = "radio" name = "radiobutton" value = "GPP" />
-        <label>Good programming practice</label><br /> -->
-        <!-- <div>
-            <input id="submit" type = "submit" name = "submit" value = "Submit" />
-            <input type = "reset" name = "reset" value = "Reset" />
-        </div> -->
     </div>
    
    
