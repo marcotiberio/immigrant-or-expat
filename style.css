@@ -62,6 +62,36 @@ button:focus {
     display: none;
 }
 
+/*--------------------------------------------------------------
+## Loader
+--------------------------------------------------------------*/
+
+#loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 10%;
+  
+    background-color: black;
+    color: white;
+    text-align: center;
+  
+    z-index: 5000;
+  }
+  
+  .loader-text {
+    font-size: 5rem;
+    /* animation: blinker 1s linear infinite; */
+  }
+  
+  /* @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  } */
+
 /* HOME */ /* HOME */ /* HOME */
 
 #menu-icon {
