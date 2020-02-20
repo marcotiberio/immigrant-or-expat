@@ -6,17 +6,20 @@
 <html class="no-js">
   <!--<![endif]-->
 
-    <!-- howlongcanyoula.st -->
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Memorial</title>
-    <meta name="description" content="" />
+    <title>Immigrant or expat?</title>
+    <meta name="description" content="Immigrant or expat? is an experimental artistic project that wants to underline how society, media and our own experience of the world
+    may bias our mind." />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css" />
-    <!-- Place your kit's code here -->
     <script src="https://kit.fontawesome.com/94ceef780c.js" crossorigin="anonymous"></script>
 
     <body>
+        <div id="loader">
+            <h1 class="loader-text">THE BIGGER<br>PICTURE</h1>
+          </div>
+
         <div class="menu">
             <div id="menu-icon">
                 <i class="fas fa-italic fa-xs"></i>
@@ -27,8 +30,8 @@
                 <img src="assets/pics/TIBO_0220_MEMORIAL001.jpg" name="randimg" style="width: 100%;"></a>
             </div>
             <div class="buttons">
-                <button class="buttongame" id="left" onClick="pickimgimmigrant();return false;">IMMIGRANT</button>
-                <button class="buttongame" id="right" onClick="pickimgexpat();return false;">EXPAT</button>
+                <button class="buttongame" id="left" onClick="pickimg();return false;">IMMIGRANT</button>
+                <button class="buttongame" id="right" onClick="pickimg();return false;">EXPAT</button>
             </div>
         </section>
 
@@ -73,29 +76,36 @@
         <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 
         <script>
-            function pickimgimmigrant(){
-            var imagenumber = 13 ;
+            function pickimg(){
+            var imagenumber = 14 ;
             var randomnumber = Math.random() ;
             var rand1 = Math.round( (imagenumber-1) * randomnumber) + 1;
             images = new Array
             images[1] = "assets/pics/TIBO_0220_MEMORIAL001.jpg"
-            images[2] = "assets/pics/TIBO_0220_MEMORIAL002.jpg"
-            images[3] = "assets/pics/TIBO_0220_MEMORIAL004.jpg"
-            images[4] = "assets/pics/TIBO_0220_MEMORIAL005.jpg"
-            images[5] = "assets/pics/TIBO_0220_MEMORIAL006.jpg"
-            images[6] = "assets/pics/TIBO_0220_MEMORIAL007.jpg"
-            images[7] = "assets/pics/TIBO_0220_MEMORIAL008.jpeg"
-            images[8] = "assets/pics/TIBO_0220_MEMORIAL009.JPG"
-            images[9] = "assets/pics/TIBO_0220_MEMORIAL010.jpg"
-            images[10] = "assets/pics/TIBO_0220_MEMORIAL011.jpg"
-            images[11] = "assets/pics/TIBO_0220_MEMORIAL012.jpg"
-            images[12] = "assets/pics/TIBO_0220_MEMORIAL013.jpg"
-            images[13] = "assets/pics/TIBO_0220_MEMORIAL014.jpg"
+            images[2] = "assets/pics/testexpat001.JPG"
+            images[3] = "assets/pics/TIBO_0220_MEMORIAL002.jpg"
+            images[4] = "assets/pics/testexpat002.PNG"
+            images[5] = "assets/pics/TIBO_0220_MEMORIAL004.jpg"
+            images[6] = "assets/pics/testexpat003.JPG"
+            images[7] = "assets/pics/TIBO_0220_MEMORIAL005.jpg"
+            images[8] = "assets/pics/testexpat004.JPG"
+            images[9] = "assets/pics/TIBO_0220_MEMORIAL006.jpg"
+            images[10] = "assets/pics/testexpat005.JPG"
+            images[11] = "assets/pics/TIBO_0220_MEMORIAL007.jpg"
+            images[12] = "assets/pics/testexpat006.JPG"
+            images[13] = "assets/pics/TIBO_0220_MEMORIAL008.jpeg"
+            images[14] = "assets/pics/testexpat007.jpg"
+            // images[15] = "assets/pics/TIBO_0220_MEMORIAL009.JPG"
+            // images[16] = "assets/pics/TIBO_0220_MEMORIAL010.jpg"
+            // images[17] = "assets/pics/TIBO_0220_MEMORIAL011.jpg"
+            // images[18] = "assets/pics/TIBO_0220_MEMORIAL012.jpg"
+            // images[19] = "assets/pics/TIBO_0220_MEMORIAL013.jpg"
+            // images[20] = "assets/pics/TIBO_0220_MEMORIAL014.jpg"
             var image = images[rand1]
             document.randimg.src = image
             }
         </script>
-        <script>
+        <!-- <script>
             function pickimgexpat(){
             var imagenumber = 7 ;
             var randomnumber = Math.random() ;
@@ -111,11 +121,22 @@
             var image = images[rand1]
             document.randimg.src = image
             }
-        </script>
+        </script> -->
 
         <script>
             $("#menu-icon").click( function() { $("#about").toggle(); } );
             $("#definitions").click( function() { $("#terms").toggle(); } );
+
+            // LOADER
+            $(function() {
+                // setTimeout() function will be fired after page is loaded
+                // it will wait for 5 sec. and then will fire
+                // $("#successMessage").hide() function
+                setTimeout(function() {
+                    $("#loader").fadeOut()
+                }, 2000);
+            });
+
         </script>
 
     
