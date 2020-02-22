@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC">
+<html>
+<head>
+<title>Immigrant or expat?</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script type = "text/Javascript">
+var rimg = 0;
+var pictures = [ "assets/pics/TIBO_0220_MEMORIAL001", "testexpat007" ];
+function randpics(){
+// pick a random image from the pictures array and displays by
+// creating an img tag and appending the src attribute to the filename
+  rimg = Math.floor(Math.random() * 2);
+  document.getElementById('photo').src = pictures[rimg]+'.jpg';
+// remove following when images are available
+  document.getElementById('photo').alt = rimg + ' : ' +pictures[rimg]+'.jpg';
+}
+function getRBtnName(GrpName) {
+  var sel = document.getElementsByName(GrpName);
+  var fnd = -1;
+  var str = '';
+  for (var i=0; i<sel.length; i++) {
+    if (sel[i].checked == true) { str = sel[i].value;  fnd = i; }
+  }
+  return fnd;   // return option index of selection
+// comment out next line if option index used in line above 
+//  return str;
+}
+function checkAnswers() {
+  var choice = getRBtnName('radiobutton');
+  var flag = false;
+  if (choice == rimg) { flag = false; alert( "Congratulations, your answer is correct! Now you can generate your own immigrants and expats!" );
+                        document.location.href="https://marcotiberio.github.io/immigrant-or-expat/generate"; }
+                 else { alert('Wrong! Now you can generate your own immigrants and expats so you can learn the difference!'); }
+                document.location.href="https://marcotiberio.github.io/immigrant-or-expat/generate";
+  return flag;
+} // end function checkAnswers
+
+
+</script>
+</head>
+
+<body onload="randpics()">
+
+<section class="mobile">
+    Please turn your phone
+</section>
+
+
+<form id="myQuiz" onsubmit="return checkAnswers()" action ="">
+    <div>
+        <img id="photo" src="" alt="mystery photo" style="width: 100%;"/>
+    </div>
+    <div class="answers">
+        <div></div>
+        <div>
+            <h2>Please look at the image and choose the option that seems more appropriate</h2>
+        </div>
+        <div class="button-input">
+            <button>
+                <label for="TIBO_0220_MEMORIAL001">
+                    <input id="TIBO_0220_MEMORIAL001" type="radio" name="radiobutton" value="TIBO_0220_MEMORIAL001" />
+                    IMMIGRANT
+                </label>
+            </button>
+        </div>
+        <div class="button-input">
+            <button>
+                <label for="testexpat007">
+                    <input id="testexpat007" type="radio" name="radiobutton" value="testexpat007" />
+                    EXPAT
+                </label>
+            </button>
+        </div>
+    </div>
+   
+   
+</form>
+</body>
+</html>

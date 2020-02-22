@@ -1,81 +1,154 @@
-<!DOCTYPE html PUBLIC">
-<html>
-<head>
-<title>Immigrant or expat?</title>
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
 
-<link rel="stylesheet" href="style.css">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Immigrant or expat?</title>
+    <meta name="description" content="Immigrant or expat? is an experimental artistic project that wants to underline how society, media and our own experience of the world
+    may bias our mind." />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/94ceef780c.js" crossorigin="anonymous"></script>
 
-<script type = "text/Javascript">
-var rimg = 0;
-var pictures = [ "assets/pics/TIBO_0220_MEMORIAL001", "testexpat007" ];
-function randpics(){
-// pick a random image from the pictures array and displays by
-// creating an img tag and appending the src attribute to the filename
-  rimg = Math.floor(Math.random() * 2);
-  document.getElementById('photo').src = pictures[rimg]+'.jpg';
-// remove following when images are available
-  document.getElementById('photo').alt = rimg + ' : ' +pictures[rimg]+'.jpg';
-}
-function getRBtnName(GrpName) {
-  var sel = document.getElementsByName(GrpName);
-  var fnd = -1;
-  var str = '';
-  for (var i=0; i<sel.length; i++) {
-    if (sel[i].checked == true) { str = sel[i].value;  fnd = i; }
-  }
-  return fnd;   // return option index of selection
-// comment out next line if option index used in line above 
-//  return str;
-}
-function checkAnswers() {
-  var choice = getRBtnName('radiobutton');
-  var flag = false;
-  if (choice == rimg) { flag = false; alert( "Congratulations, your answer is correct! Now you can generate your own immigrants and expats!" );
-                        document.location.href="https://marcotiberio.github.io/immigrant-or-expat/generate"; }
-                 else { alert('Wrong! Now you can generate your own immigrants and expats so you can learn the difference!'); }
-                document.location.href="https://marcotiberio.github.io/immigrant-or-expat/generate";
-  return flag;
-} // end function checkAnswers
-
-
-</script>
-</head>
-
-<body onload="randpics()">
-
-<section class="mobile">
-    Please turn your phone
-</section>
-
-
-<form id="myQuiz" onsubmit="return checkAnswers()" action ="">
-    <div>
-        <img id="photo" src="" alt="mystery photo" style="width: 100%;"/>
-    </div>
-    <div class="answers">
-        <div></div>
-        <div>
-            <h2>Please look at the image and choose the option that seems more appropriate</h2>
+    <body>
+        <div id="loader">
+            <h3 class="loader-text">Please look at the images and choose the option that you deem more correct</h3>
         </div>
-        <div class="button-input">
-            <button>
-                <label for="TIBO_0220_MEMORIAL001">
-                    <input id="TIBO_0220_MEMORIAL001" type="radio" name="radiobutton" value="TIBO_0220_MEMORIAL001" />
-                    IMMIGRANT
-                </label>
-            </button>
-        </div>
-        <div class="button-input">
-            <button>
-                <label for="testexpat007">
-                    <input id="testexpat007" type="radio" name="radiobutton" value="testexpat007" />
-                    EXPAT
-                </label>
-            </button>
-        </div>
-    </div>
-   
-   
-</form>
-</body>
+
+        <div class="menu">
+            <div id="menu-icon">
+                <i class="fas fa-italic fa-xs"></i>
+            </div>
+          </div>
+        <section class="game">
+            <div>
+                <img src="assets/pics/TIBO_0220_MEMORIAL001.jpg" name="randimg" style="width: 100%;"></a>
+            </div>
+            <div class="buttons">
+                <button class="buttongame" id="left" onClick="pickimg();return false;">IMMIGRANT</button>
+                <button class="buttongame" id="right" onClick="pickimg();return false;">EXPAT</button>
+            </div>
+        </section>
+
+        <div id="about">
+            <div class="about-left">
+                <!-- <form action="https://formspree.io/xgeyewlg" method="POST">
+                    <input type="text" name="name">
+                    <input type="email" name="_replyto">
+                    <input type="submit" value="Send">
+                  </form> -->
+            </div>
+                <!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdGJfXbbhxCjVMIvWu3_oFfFBkbxchaDnQ-nDKk8CTab1Zf6A/viewform?embedded=true" width="640" height="574" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>            </div> -->
+            <div class="about-right">
+                <p>What is the power of language? Why do we choose a word instead of another? How does media affect 
+                our perception of these different words with same meaning? And how inconsciously racist are we
+                when we choose a word over another?</p>
+                <!-- <span><div class="latent-space" style="width:20%;height:0;padding-bottom:20%;position:relative;"><iframe src="https://giphy.com/embed/WQ5L0ecAaN2g4ZYGrC" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div></span> -->
+                <p>This game is an artistic project that wants to underline how society, media and our own experience of the world
+                shapes our mind.<br>
+                If I say "John is a migrant" or "John is an expat" how do you picture John in your head? Does he look the same?</p>
+                <p>The faces I present here are not real. They are the creation of a machine learning model. They have been 
+                generated drawing from two different datasets of portraits. In one dataset the people portaied were tagged as "immigrant", 
+                while in the other one as "expat". 
+                We might say that the machine that generated these images is as biased as human beings.</p>
+                <p>This experiment was made possible thanks to <a href="https://runwayml.com/" target="_blank">Runway ML</a>.</p>
+                <br>
+                <hr>
+                <div class="footer">
+                    <div id="terms" style="display: none;">
+                        <div>
+                            <h4>Expat</h4>
+                            <p>A person living in a country that is not their own.</p>
+                        </div>
+                        <div>
+                            <h4>Immigrant</h4>
+                            <p>​A person who has come to live permanently in a country that is not their own.</p>
+                        </div>
+                    </div>
+                    <u id="definitions" style="cursor: pointer;">Definitions</u>
+                </div>
+
+                <!-- <div class="images">
+                    <div><img src="assets/pics/TIBO_0220_MEMORIAL001.jpg" alt="" style="width: 100%;"></div>
+                    <div><img src="assets/pics/TIBO_0220_MEMORIAL002.jpg" alt="" style="width: 100%;"></div>
+                    <div><img src="assets/pics/TIBO_0220_MEMORIAL004.jpg" alt="" style="width: 100%;"></div>
+                    <div><img src="assets/pics/TIBO_0220_MEMORIAL005.jpg" alt="" style="width: 100%;"></div>
+                    <div><img src="assets/pics/TIBO_0220_MEMORIAL006.jpg" alt="" style="width: 100%;"></div>
+                    <div><img src="assets/pics/TIBO_0220_MEMORIAL007.jpg" alt="" style="width: 100%;"></div>
+                </div> -->
+            </div>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+        <script>
+            function pickimg(){
+            var imagenumber = 14 ;
+            var randomnumber = Math.random() ;
+            var rand1 = Math.round( (imagenumber-1) * randomnumber) + 1;
+            images = new Array
+            images[1] = "assets/pics/TIBO_0220_MEMORIAL001.jpg"
+            images[2] = "expat_test/TIBO_0220_026012.jpg"
+            images[3] = "assets/pics/TIBO_0220_MEMORIAL002.jpg"
+            images[4] = "expat_test/TIBO_0220_026044.jpg"
+            images[5] = "assets/pics/TIBO_0220_MEMORIAL004.jpg"
+            images[6] = "expat_test/testexpat007.jpg"
+            images[7] = "assets/pics/TIBO_0220_MEMORIAL005.jpg"
+            images[8] = "expat_test/TIBO_0220_090010.jpg"
+            images[9] = "assets/pics/TIBO_0220_MEMORIAL006.jpg"
+            images[10] = "assets/pics/testexpat005.JPG"
+            images[11] = "assets/pics/TIBO_0220_MEMORIAL007.jpg"
+            images[12] = "expat_test/TIBO_0220_090048.jpg"
+            images[13] = "assets/pics/TIBO_0220_MEMORIAL008.jpeg"
+            images[14] = "expat_test/TIBO_0220_090103.jpg"
+            // images[15] = "assets/pics/TIBO_0220_MEMORIAL009.JPG"
+            // images[16] = "assets/pics/TIBO_0220_MEMORIAL010.jpg"
+            // images[17] = "assets/pics/TIBO_0220_MEMORIAL011.jpg"
+            // images[18] = "assets/pics/TIBO_0220_MEMORIAL012.jpg"
+            // images[19] = "assets/pics/TIBO_0220_MEMORIAL013.jpg"
+            // images[20] = "assets/pics/TIBO_0220_MEMORIAL014.jpg"
+            var image = images[rand1]
+            document.randimg.src = image
+            }
+        </script>
+        <!-- <script>
+            function pickimgexpat(){
+            var imagenumber = 7 ;
+            var randomnumber = Math.random() ;
+            var rand1 = Math.round( (imagenumber-1) * randomnumber) + 1;
+            images = new Array
+            images[1] = "assets/pics/testexpat001.JPG"
+            images[2] = "assets/pics/testexpat002.PNG"
+            images[3] = "assets/pics/testexpat003.JPG"
+            images[4] = "assets/pics/testexpat004.JPG"
+            images[5] = "assets/pics/testexpat005.JPG"
+            images[6] = "assets/pics/testexpat006.JPG"
+            images[7] = "assets/pics/testexpat007.JPG"
+            var image = images[rand1]
+            document.randimg.src = image
+            }
+        </script> -->
+
+        <script>
+            $("#menu-icon").click( function() { $("#about").toggle(); } );
+            $("#definitions").click( function() { $("#terms").toggle(); } );
+
+            // LOADER
+            $(function() {
+                // setTimeout() function will be fired after page is loaded
+                // it will wait for 5 sec. and then will fire
+                // $("#successMessage").hide() function
+                setTimeout(function() {
+                    $("#loader").fadeOut()
+                }, 1000);
+            });
+
+        </script>
+
+    
+    </body>
 </html>
