@@ -352,7 +352,7 @@ label input[type="radio"] {
         border: 1px solid lime;
     }
 
-    .loader h3 {
+    .loader-text {
         font-size: 2rem;
     }
 
