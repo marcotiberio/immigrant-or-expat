@@ -444,6 +444,10 @@ label input[type="radio"] {
         background-color: black;
     }
 
+    .about-left {
+        display: none !important;
+    }
+
     #terms {
         margin: 0;
         padding: 2%;
