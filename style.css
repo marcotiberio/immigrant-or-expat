@@ -341,6 +341,7 @@ label input[type="radio"] {
         font-size: 2em;
     }
 
+
     button {
         padding: 10%;
         font-family: 'Courier New', Courier, monospace;
@@ -349,6 +350,10 @@ label input[type="radio"] {
         color: lime;
         background-color: black;
         border: 1px solid lime;
+    }
+
+    .loader h3 {
+        font-size: 2rem;
     }
 
     .header {
