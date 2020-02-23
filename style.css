@@ -99,7 +99,7 @@ button:focus {
 #menu-icon {
     position: fixed;
     width: fit-content;
-    top: 1.5%;
+    /* top: 1.5%; */
     right: 1.5%;
     
     text-align: right;
@@ -188,7 +188,7 @@ button:focus {
 
 #terms {
     margin: 0;
-    padding: 0;
+    padding-right: 2%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
