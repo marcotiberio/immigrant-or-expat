@@ -362,6 +362,7 @@ label input[type="radio"] {
 
     .loader-text {
         font-size: 2rem;
+        padding: 3%;
     }
 
     .header {
@@ -424,7 +425,7 @@ label input[type="radio"] {
     }
 
     .footer {
-        display: none;
+        display: none !important;
     }
 
     .footer-mobile {
