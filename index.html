@@ -21,8 +21,9 @@
         </div>
 
         <div class="menu">
-            <div id="menu-icon">
-                <i class="fas fa-italic fa-xs"></i>
+            <div id="menu-icon" style="display: none;">
+                <p>x</p>
+                <!-- <i class="fas fa-italic fa-xs"></i> -->
             </div>
           </div>
         <section class="game">
@@ -34,6 +35,7 @@
                 <button class="buttongame" id="right" onClick="pickimg();return false;">EXPAT</button>
             </div>
         </section>
+
 
         <div id="about" style="display: none;">
             <div class="about-left">
@@ -147,6 +149,19 @@
                 setTimeout(function() {
                     $("#loader").fadeOut()
                 }, 1000);
+            });
+
+            // LOADER
+            $(function() {
+                // setTimeout() function will be fired after page is loaded
+                // it will wait for 5 sec. and then will fire
+                // $("#successMessage").hide() function
+                setTimeout(function() {
+                    $("#menu-icon").fadeIn()
+                }, 5000);
+                setTimeout(function() {
+                    $("#about").fadeIn()
+                }, 5000);
             });
 
         </script>
