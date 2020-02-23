@@ -186,6 +186,10 @@ button:focus {
     bottom: 10%;
 }
 
+.footer-mobile {
+    display: none;;
+}
+
 #terms {
     margin: 0;
     padding-right: 2%;
@@ -420,10 +424,15 @@ label input[type="radio"] {
     }
 
     .footer {
+        display: none;
+    }
+
+    .footer-mobile {
+        display: block;
         position: absolute;
         bottom: 0;
         left: 2%;
-        margin: 0;
+        margin-top: 2%;
     }
 
     .latent-space {
