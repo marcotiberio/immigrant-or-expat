@@ -9,7 +9,6 @@
                 world shapes our mind, often also in a biased manner. 
                 <br>If I say "John is a migrant" or "John is an expat" how do you picture John in your head? Does he look 
                 the same? Why do you choose to use migrant instead of expat?</p>
-                <br>
                 <p>The persons here portrayed are not real, of course. They are the creation of a machine learning model, 
                 a <a href="https://en.wikipedia.org/wiki/Generative_adversarial_network" target="_blank"><u>GAN</u></a>. 
                 They have been generated drawing from two different datasets of portraits. In one dataset the people portaied 
