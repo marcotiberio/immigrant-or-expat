@@ -179,10 +179,6 @@ button:focus {
     letter-spacing: 0;
 }
 
-.about-left-model {
-    padding-top: 5% 0 0 0;
-}
-
 #gameover {
     display: none;
     position: absolute;
@@ -219,7 +215,7 @@ button:focus {
     width: 94.5%;
 
     position: relative;
-    bottom: 0;
+    bottom: 2%;
     left: 0;
 }
 
