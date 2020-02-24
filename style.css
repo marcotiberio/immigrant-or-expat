@@ -135,7 +135,7 @@ button:focus {
     grid-row-gap: 0;
 
     color: white;
-    font-size: 1.2rem;
+    font-size: 1rem;;
 
     background-color: black;
 }
@@ -175,7 +175,7 @@ button:focus {
 }
 
 .about-left-form button {
-    font-size: 1.2rem;
+    font-size: 1rem;
     letter-spacing: 0;
 }
 
@@ -194,7 +194,7 @@ button:focus {
     grid-row-gap: 0; */
 
     color: white;
-    font-size: 1.2rem;
+    font-size: 1rem;
 
     background-color: black;
 }
@@ -235,7 +235,7 @@ button:focus {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
-    grid-column-gap: 0;
+    grid-column-gap: 1%;
     grid-row-gap: 0;
 
     background-color: black;
@@ -441,7 +441,7 @@ label input[type="radio"] {
         grid-row-gap: 0;
     
         color: white;
-        font-size: 1.2rem;
+        font-size: 1rem;
     
         background-color: black;
     }
