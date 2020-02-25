@@ -219,6 +219,10 @@ button:focus {
     left: 0;
 }
 
+.images-mobile {
+    display: none;
+}
+
 .footer {
     position: absolute;
     bottom: 10%;
@@ -476,6 +480,7 @@ label input[type="radio"] {
     }
 
     .latent-space {
+        display: block;
         border: 5px solid white; 
         float: left; 
         margin-bottom: 2%; 
@@ -497,6 +502,17 @@ label input[type="radio"] {
         grid-row-gap: 5%;
     
         width: 97%;
+    }
+
+    .images-mobile {
+        display: block;
+        margin-bottom: 5%;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 5%;
+        grid-row-gap: 5%;
     }
 
     .game {
