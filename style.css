@@ -249,7 +249,7 @@ button:focus {
 
 .images {
     margin: 0;
-    padding-bottom: 2% !important;
+    padding-bottom: 0 !important;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
@@ -260,6 +260,10 @@ button:focus {
     position: relative;
     bottom: 2%;
     left: 0;
+}
+
+#images-expat {
+    padding-top: 0.5%;
 }
 
 .images-mobile {
