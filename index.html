@@ -62,8 +62,77 @@
         </section>
 
 
-        <div id="about" style="display: none; overflow: auto;">
-            <div class="about-left">
+        <div id="about-new" style="display: none; overflow: auto;">
+                <div class="about-new-text">
+                    <p>If I say "John is a migrant" or "John is an expat" how do you picture John in your head? Does he look 
+                    the same? Why do you choose to use migrant instead of expat?
+                    And yet, the two terms have the same meaning.</p>
+                    <div id="terms">
+                        <div>
+                            <h4>Immigrant</h4>
+                            <p>​A person who has come to live permanently in a country that is not their own.</p>
+                        </div>
+                        <div>
+                            <h4>Expat</h4>
+                            <p>A person living in a country that is not their own.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slideshow">
+                    <div class="mySlides fade">
+                        <img src="assets/pics/TIBO_0220_MEMORIAL001.jpg" style="width:48%;">
+                        <img src="assets/pics/TIBO_0220_MEMORIAL002.jpg" style="width:48%; float: right;">
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img src="assets/pics/TIBO_0220_MEMORIAL001.jpg" style="width:48%;">
+                        <img src="assets/pics/TIBO_0220_MEMORIAL002.jpg" style="width:48%; float: right;">
+                    </div>
+                      
+                    <div class="mySlides fade">
+                        <img src="assets/pics/TIBO_0220_MEMORIAL004.jpg" style="width:48%">
+                        <img src="assets/pics/TIBO_0220_MEMORIAL005.jpg" style="width:48%; float: right;">
+                    </div>
+                      
+                    <div class="mySlides fade">
+                        <img src="assets/pics/TIBO_0220_MEMORIAL006.jpg" style="width:48%">
+                        <img src="assets/pics/TIBO_0220_MEMORIAL007.jpg" style="width:48%; float: right;">
+                    </div>
+                      
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <div class="about-new-text">
+                    <p>The persons here portrayed are not real, of course. They are the creation of a machine learning system 
+                        called <a href="https://en.wikipedia.org/wiki/Generative_adversarial_network" target="_blank"><u>GAN</u></a>. 
+                        They have been generated drawing from two different datasets of portraits. In one dataset the people portaied 
+                        were tagged as "immigrant", while in the other one as "expat". In such a process where you can generate images 
+                        on a very bug scale, it’s easier to understand the bias permeating these two words.</p>
+                    <p>What is the power of language? Why do we choose a word instead of another? How does media affect 
+                        our perception of different words with same meaning? And how inconsciously biased are we when we choose 
+                        a word over another?</p>
+                    <p>This is an experimental project that wants to underline how society, media and our own experience of the 
+                        world shapes our mind, often also in a biased manner.</p>
+                </div>
+                <div class="about-new-survey">
+                    <div>
+                        <button><a href="https://forms.gle/YpfafVkfQVxNYBzT9" target="_blank">If you want to reply a few questions about the project or report any issue, click here.</a></button>
+                    </div>
+                    <div>
+                        <button><a href="https://teachablemachine.withgoogle.com/models/-YQ1QB5p/" target="_blank">If you want to learn how a machine would categorise you, click here.</a></button>
+                    </div>
+                </div>
+                <div class="about-new-contact">
+                    <p>This experiment was conceived and created by me and <a href="https://www.instagram.com/mariaghetti/" target="_blank"><u>Maria Ghetti</u></a>, and made 
+                    possible by <a href="https://runwayml.com/" target="_blank"><u>Runway ML</u></a>.
+                    For any additional information, question or complaint you can email me <a href="mailto:tiberiomrc@gmail.com" target="_blank"><u>here</u></a>.</p>
+                </div>
+
+
+
+
+
+            <!-- <div class="about-left">
                 <div class="about-left-form">
                     <button><a href="https://forms.gle/YpfafVkfQVxNYBzT9" target="_blank">If you want to reply a few questions about the project or report any issue, click here.</a></button>
                     <br><br><br>
@@ -78,22 +147,22 @@
                         <div><img src="assets/pics/TIBO_0220_MEMORIAL006.jpg" alt="" style="width: 100%;"></div>
                         <div><img src="assets/pics/TIBO_0220_MEMORIAL007.jpg" alt="" style="width: 100%;"></div>
                     </div>
-                </div>
+                </div> -->
                 <!-- <form action="https://formspree.io/xgeyewlg" method="POST">
                     <input type="text" name="name">
                     <input type="email" name="_replyto">
                     <input type="submit" value="Send">
                   </form> -->
                   <!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdGJfXbbhxCjVMIvWu3_oFfFBkbxchaDnQ-nDKk8CTab1Zf6A/viewform?embedded=true" width="640" height="598" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> -->
-            </div>
+            <!-- </div> -->
                 
-            <div class="about-right">
+            <!-- <div class="about-right">
                 <p>What is the power of language? Why do we choose a word instead of another? How does media affect 
                 our perception of different words with same meaning? And how inconsciously biased are we when we choose 
                 a word over another?
                 </p>
-                <!-- <div class="latent-space" style="width:20%;height:0;padding-bottom:20%;position:relative;"><iframe src="https://giphy.com/embed/WQ5L0ecAaN2g4ZYGrC" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div> -->
-                <p>This is an experimental project that wants to underline how society, media and our own experience of the 
+                <div class="latent-space" style="width:20%;height:0;padding-bottom:20%;position:relative;"><iframe src="https://giphy.com/embed/WQ5L0ecAaN2g4ZYGrC" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div> -->
+                <!-- <p>This is an experimental project that wants to underline how society, media and our own experience of the 
                 world shapes our mind, often also in a biased manner. 
                 <br>If I say "John is a migrant" or "John is an expat" how do you picture John in your head? Does he look 
                 the same? Why do you choose to use migrant instead of expat?</p>
@@ -133,7 +202,7 @@
                         </div>
                     </div>
                     <u id="definitions" style="cursor: pointer;">Definitions</u>
-                </div>
+                </div> -->
 
                 <!-- <div class="images">
                     <div><img src="assets/pics/TIBO_0220_MEMORIAL001.jpg" alt="" style="width: 100%;"></div>
@@ -143,11 +212,12 @@
                     <div><img src="assets/pics/TIBO_0220_MEMORIAL006.jpg" alt="" style="width: 100%;"></div>
                     <div><img src="assets/pics/TIBO_0220_MEMORIAL007.jpg" alt="" style="width: 100%;"></div>
                 </div> -->
-            </div>
+            <!-- </div> -->
         </div>
 
         <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 
+        <!-- Pickimg -->
         <script>
             function pickimg(){
             var imagenumber = 24 ;
@@ -182,26 +252,39 @@
             document.randimg.src = image
             }
         </script>
-        <!-- <script>
-            function pickimgexpat(){
-            var imagenumber = 7 ;
-            var randomnumber = Math.random() ;
-            var rand1 = Math.round( (imagenumber-1) * randomnumber) + 1;
-            images = new Array
-            images[1] = "assets/pics/testexpat001.JPG"
-            images[2] = "assets/pics/testexpat002.PNG"
-            images[3] = "assets/pics/testexpat003.JPG"
-            images[4] = "assets/pics/testexpat004.JPG"
-            images[5] = "assets/pics/testexpat005.JPG"
-            images[6] = "assets/pics/testexpat006.JPG"
-            images[7] = "assets/pics/testexpat007.JPG"
-            var image = images[rand1]
-            document.randimg.src = image
+
+        <!-- Slideshow -->
+        <script> 
+            var slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
             }
-        </script> -->
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+        </script>
 
         <script>
-            $("#menu-icon").click( function() { $("#about").toggle(); } );
+            $("#menu-icon").click( function() { $("#about-new").toggle(); } );
             $("#definitions").click( function() { $("#terms").toggle(); } );
 
             // LOADER

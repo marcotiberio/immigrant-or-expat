@@ -40,13 +40,12 @@ h4 {
 }
 
 button {
-    padding: 1%;
+    padding: 0;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 2.5em;
+    font-size: 1.2rem;
     font-weight: 400;
-    letter-spacing: 0.3rem;
 
-    text-align: center;
+    text-align: left;
     background-color: transparent;
     border: none;
 
@@ -132,22 +131,22 @@ button:focus {
 ## About
 --------------------------------------------------------------*/
 
-#about {
+#about-new {
     display: none;
     position: absolute;
     right: 0;
     width: 94.5%;
     height: 100%;
-    padding: 2% 4% 2% 2%;
+    padding: 1% 4% 2% 2%;
 
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
     grid-column-gap: 0;
-    grid-row-gap: 0;
+    grid-row-gap: 0; */
 
     color: white;
-    font-size: 1rem;;
+    font-size: 1.2rem;
 
     background-color: black;
 }
@@ -186,8 +185,35 @@ button:focus {
     background-color: transparent;
 }
 
+.about-new-text {
+    padding-top: 0.5%;
+}
+
+.about-new-survey {
+    width: 100%;
+    /* height: 100%; */
+    margin: 0;
+    padding-bottom: 2%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 2%;
+    grid-row-gap: 0px;
+}
+
+.about-new-survey div button {
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.about-new-contact {
+    padding-bottom: 5%;
+}
+
 .about-left-form button {
-    font-size: 1rem;
+    font-size: 1.2rem;
     letter-spacing: 0;
 }
 
@@ -206,7 +232,7 @@ button:focus {
     grid-row-gap: 0; */
 
     color: white;
-    font-size: 1rem;
+    font-size: 1.2rem;
 
     background-color: black;
 }
@@ -247,16 +273,55 @@ button:focus {
 
 #terms {
     margin-bottom: 2%;
-    padding: 2%;
+    padding: 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
     grid-column-gap: 1%;
     grid-row-gap: 0;
 
-    background-color: black;
-    border: 5px solid white;
+    /* background-color: black;
+    border: 5px solid white; */
 }
+
+/*--------------------------------------------------------------
+## Slideshow
+--------------------------------------------------------------*/
+
+/* Slideshow container */
+.slideshow {
+    margin: 0;
+    padding-bottom: 1%;
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .mySlides img {
+    margin: 0 1%;
+  }
 
 /*--------------------------------------------------------------
 ## Game
@@ -442,6 +507,26 @@ label input[type="radio"] {
         width: 100vw;
     }
 
+    #about-new {
+        display: none;
+        position: absolute;
+        right: 0;
+        width: 94.5%;
+        height: 100%;
+        padding: 2% 4% 2% 2%;
+    
+        /* display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0;
+        grid-row-gap: 0; */
+    
+        color: white;
+        font-size: 1.2rem;
+    
+        background-color: black;
+    }
+
     #about {
         display: none;
         position: absolute;
@@ -468,7 +553,7 @@ label input[type="radio"] {
 
     #terms {
         margin: 0;
-        padding: 2%;
+        padding: 0;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(2, 1fr);
@@ -476,7 +561,7 @@ label input[type="radio"] {
         grid-row-gap: 0;
 
         background-color: black;
-        border: 5px solid white;
+        /* border: 5px solid white; */
     }
 
     .footer {
