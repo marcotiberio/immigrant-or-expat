@@ -263,6 +263,10 @@ button:focus {
     left: 0;
 }
 
+#images-immigrant {
+    padding-top: 1%;
+}
+
 #images-expat {
     padding-top: 0.5%;
 }
