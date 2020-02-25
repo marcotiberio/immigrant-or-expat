@@ -201,6 +201,11 @@ button:focus {
     grid-row-gap: 0px;
 }
 
+.buttonsurvey:hover {
+    color: black;
+    background-color: white;
+}
+
 .about-new-survey div button {
     padding-top: 0.5%;
     padding-bottom: 0.5%;
@@ -525,6 +530,10 @@ label input[type="radio"] {
         font-size: 1.2rem;
     
         background-color: black;
+    }
+
+    .about-new-contact {
+        padding-top: 3%;
     }
 
     #about {
