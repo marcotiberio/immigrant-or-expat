@@ -53,11 +53,11 @@
           </div>
         <section class="game">
             <div>
-                <img src="assets/pics/TIBO_0220_MEMORIAL001.jpg" name="randimg" style="width: 100%; max-height: ;"></a>
+                <img src="assets/pics/TIBO_0220_MEMORIAL001.jpg" id="myPicture" name="randimg" style="width: 100%; max-height: ;"></a>
             </div>
             <div class="buttons">
-                <button class="buttongame" id="left" onClick="pickimg1();return false;">IMMIGRANT</button>
-                <button class="buttongame" id="right" onClick="pickimg1();return false;">EXPAT</button>
+                <button class="buttongame" id="left" onClick="choosePic()">IMMIGRANT</button>
+                <button class="buttongame" id="right" onClick="choosePic()">EXPAT</button>
             </div>
         </section>
 
@@ -222,7 +222,7 @@
         <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 
         <!-- Pickimg -->
-        <script>
+        <!-- <script>
             function pickimg1(){
             var imagenumber = 24 ;
             var randomnumber = Math.random() ;
@@ -255,7 +255,7 @@
             var image = images[rand1]
             document.randimg.src = image
             }
-        </script>
+        </script> -->
         <!-- <script>
             function pickimg2(){
             var imagenumber = 24 ;
@@ -290,6 +290,44 @@
             document.randimg.src = image
             }
         </script> -->
+
+        <script>
+
+            var myPix = new Array("assets/pics/TIBO_0220_Expats001.jpg",
+                                    "assets/pics/TIBO_0220_MEMORIAL001.jpg",
+                                    "assets/pics/TIBO_0220_Expats002.jpg",
+                                    "assets/pics/TIBO_0220_MEMORIAL002.jpg",
+                                    "assets/pics/TIBO_0220_Expats003.jpg",
+                                    "assets/pics/TIBO_0220_MEMORIAL004.jpg",
+                                    "assets/pics/TIBO_0220_MEMORIAL005.jpg",
+                                    "assets/pics/TIBO_0220_Expats004.jpg",
+                                    "assets/pics/TIBO_0220_MEMORIAL006.jpg",
+                                    "assets/pics/TIBO_0220_Expats005.jpg",
+                                    "assets/pics/TIBO_0220_MEMORIAL007.jpg",
+                                    "assets/pics/TIBO_0220_Expats006.jpg",
+                                    "assets/pics/TIBO_0220_MEMORIAL008.jpeg",
+                                    "assets/pics/TIBO_0220_Expats007.jpg",
+                                    "assets/pics/TIBO_0220_MEMORIAL009.JPG",
+                                    "assets/pics/TIBO_0220_Expats008.jpg",
+                                    "assets/pics/TIBO_0220_MEMORIAL010.jpg",
+                                    "assets/pics/TIBO_0220_Expats009.jpg",
+                                    "assets/pics/TIBO_0220_MEMORIAL012.jpg",
+                                    "assets/pics/TIBO_0220_Expats010.jpg",
+                                    "assets/pics/TIBO_0220_MEMORIAL013.jpg",
+                                    "assets/pics/TIBO_0220_Expats011.jpg",
+                                    "assets/pics/TIBO_0220_MEMORIAL014.jpg",
+                                    "assets/pics/TIBO_0220_Expats012.jpg",
+                                    "assets/pics/TIBO_0220_MEMORIAL013.jpg",
+                                    "assets/pics/TIBO_0220_Expats013.jpg",
+                                    "assets/pics/TIBO_0220_MEMORIAL014.jpg"
+                                );
+
+            function choosePic() {
+                var randomNum = Math.floor(Math.random() * myPix.length);
+                document.getElementById("myPicture").src = myPix[randomNum];
+            }
+
+        </script>
 
         <!-- Slideshow -->
         <script> 
