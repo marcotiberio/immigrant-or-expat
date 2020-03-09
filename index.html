@@ -18,7 +18,7 @@
     gtag('config', 'UA-158939462-1');
     </script>
 
-<script>
+<!-- <script>
 
     var myPix = new Array("assets/pics/TIBO_0220_Expats001.jpg",
                             "assets/pics/TIBO_0220_MEMORIAL001.jpg",
@@ -54,7 +54,7 @@
         document.getElementById("myPicture").src = myPix[randomNum];
     }
 
-</script>
+</script> -->
 
 
     <meta charset="utf-8" />
@@ -95,7 +95,7 @@
             </div>
             <div class="buttons">
                 <button class="buttongame" id="left">IMMIGRANT</button>
-                <button class="buttongame" id="right" onClick="choosePic()">EXPAT</button>
+                <button class="buttongame" id="right">EXPAT</button>
             </div>
         </section>
 
@@ -361,6 +361,66 @@
 
         <script>
             $("#left").click( function() { 
+                var myPix = new Array("assets/pics/TIBO_0220_Expats001.jpg",
+                            "assets/pics/TIBO_0220_MEMORIAL001.jpg",
+                            "assets/pics/TIBO_0220_Expats002.jpg",
+                            "assets/pics/TIBO_0220_MEMORIAL002.jpg",
+                            "assets/pics/TIBO_0220_Expats003.jpg",
+                            "assets/pics/TIBO_0220_MEMORIAL004.jpg",
+                            "assets/pics/TIBO_0220_MEMORIAL005.jpg",
+                            "assets/pics/TIBO_0220_Expats004.jpg",
+                            "assets/pics/TIBO_0220_MEMORIAL006.jpg",
+                            "assets/pics/TIBO_0220_Expats005.jpg",
+                            "assets/pics/TIBO_0220_MEMORIAL007.jpg",
+                            "assets/pics/TIBO_0220_Expats006.jpg",
+                            "assets/pics/TIBO_0220_MEMORIAL008.jpeg",
+                            "assets/pics/TIBO_0220_Expats007.jpg",
+                            "assets/pics/TIBO_0220_MEMORIAL009.JPG",
+                            "assets/pics/TIBO_0220_Expats008.jpg",
+                            "assets/pics/TIBO_0220_MEMORIAL010.jpg",
+                            "assets/pics/TIBO_0220_Expats009.jpg",
+                            "assets/pics/TIBO_0220_MEMORIAL012.jpg",
+                            "assets/pics/TIBO_0220_Expats010.jpg",
+                            "assets/pics/TIBO_0220_MEMORIAL013.jpg",
+                            "assets/pics/TIBO_0220_Expats011.jpg",
+                            "assets/pics/TIBO_0220_MEMORIAL014.jpg",
+                            "assets/pics/TIBO_0220_Expats012.jpg",
+                            "assets/pics/TIBO_0220_MEMORIAL013.jpg",
+                            "assets/pics/TIBO_0220_Expats013.jpg",
+                            "assets/pics/TIBO_0220_MEMORIAL014.jpg"
+                        );
+                var randomNum = Math.floor(Math.random() * myPix.length);
+                document.getElementById("myPicture").src = myPix[randomNum]; 
+            } );
+            $("#right").click( function() { 
+                var myPix = new Array("assets/pics/TIBO_0220_Expats001.jpg",
+                            "assets/pics/TIBO_0220_MEMORIAL001.jpg",
+                            "assets/pics/TIBO_0220_Expats002.jpg",
+                            "assets/pics/TIBO_0220_MEMORIAL002.jpg",
+                            "assets/pics/TIBO_0220_Expats003.jpg",
+                            "assets/pics/TIBO_0220_MEMORIAL004.jpg",
+                            "assets/pics/TIBO_0220_MEMORIAL005.jpg",
+                            "assets/pics/TIBO_0220_Expats004.jpg",
+                            "assets/pics/TIBO_0220_MEMORIAL006.jpg",
+                            "assets/pics/TIBO_0220_Expats005.jpg",
+                            "assets/pics/TIBO_0220_MEMORIAL007.jpg",
+                            "assets/pics/TIBO_0220_Expats006.jpg",
+                            "assets/pics/TIBO_0220_MEMORIAL008.jpeg",
+                            "assets/pics/TIBO_0220_Expats007.jpg",
+                            "assets/pics/TIBO_0220_MEMORIAL009.JPG",
+                            "assets/pics/TIBO_0220_Expats008.jpg",
+                            "assets/pics/TIBO_0220_MEMORIAL010.jpg",
+                            "assets/pics/TIBO_0220_Expats009.jpg",
+                            "assets/pics/TIBO_0220_MEMORIAL012.jpg",
+                            "assets/pics/TIBO_0220_Expats010.jpg",
+                            "assets/pics/TIBO_0220_MEMORIAL013.jpg",
+                            "assets/pics/TIBO_0220_Expats011.jpg",
+                            "assets/pics/TIBO_0220_MEMORIAL014.jpg",
+                            "assets/pics/TIBO_0220_Expats012.jpg",
+                            "assets/pics/TIBO_0220_MEMORIAL013.jpg",
+                            "assets/pics/TIBO_0220_Expats013.jpg",
+                            "assets/pics/TIBO_0220_MEMORIAL014.jpg"
+                        );
                 var randomNum = Math.floor(Math.random() * myPix.length);
                 document.getElementById("myPicture").src = myPix[randomNum]; 
             } );
