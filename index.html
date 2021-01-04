@@ -80,7 +80,7 @@
 
     <body>
         <div id="loader">
-            <h3 class="loader-text">Please have look at the photo and choose the word that best describes the person portrayed            </h3>
+            <h3 class="loader-text">Please have look at the pictures and choose the term that best describes the person portrayed</h3>
         </div>
 
         <div class="menu">
@@ -91,7 +91,7 @@
           </div>
         <section class="game">
             <div>
-                <img src="assets/pics/TIBO_0220_MEMORIAL001_web.jpg" id="myPicture" name="randimg" style="width: 100%; max-height: ;"></a>
+                <img src="assets/pics/TIBO_0220_MEMORIAL001_web.jpg" id="myPicture" name="randimg" style="width: 100%; height: 100%; object-fit: cover;"></a>
             </div>
             <div class="buttons">
                 <button class="buttongame" id="left">IMMIGRANT</button>
@@ -102,9 +102,8 @@
 
         <div id="about-new" style="display: none; overflow: auto;">
                 <div class="about-new-text">
-                    <p>If I say "John is an immigrant" or "John is an expat" how do you picture John in your head? Does he look 
-                    the same? Why do you choose to use immigrant instead of expat?
-                    And yet, the two terms have the same meaning.</p>
+                    <p>If I say "John is a migrant" or "John is an expat" how do you picture John in your head? 
+                    How does he look? Why do you choose to use migrant instead of expat? And yet, the two terms have the same meaning.</p>
                     <u>Immigrant</u><p>​A person who has come to live permanently in a country that is not their own.</p>
                     <u>Expat</u><p>A person living in a country that is not their own.</p>
                 </div>
@@ -147,25 +146,30 @@
                 <div class="about-new-text">
                     <p>The persons here portrayed are not real, of course. They are the creation of a machine learning system 
                         called <a href="https://en.wikipedia.org/wiki/Generative_adversarial_network" target="_blank"><u>GAN</u></a>. 
-                        They have been generated drawing from two different datasets of portraits. In one dataset the people portaied 
-                        were tagged as "immigrant", while in the other one as "expat". In such a process where you can generate images 
-                        on a very bug scale, it’s easier to understand the bias permeating these two words.</p>
-                    <p>What is the power of language? Why do we choose a word instead of another? How does media affect 
-                        our perception of different words with same meaning? And how inconsciously biased are we when we choose 
-                        a word over another?</p>
-                    <p>This is an experimental project that wants to underline how society, media and our own experience of the 
-                        world shapes our mind, often also in a biased manner.</p>
+                        They have been generated drawing from two different datasets of portraits. For one dataset I used 
+                        photos of people from Flickr that have been tagged as "immigrant", while in the other one I used 
+                        photos of people that have been tagged as "expat". Afterwards, I trained the GAN twice, once for 
+                        each of the two datasets, letting it generate these portraits.</p>
+                    <p>The computer becomes inherently biased in a way (racist?) since it has been fed and trained by a human being. 
+                        And in such a process, where you can generate images on a very big scale, it’s easier to 
+                        understand the bias permeating these two terms, and it’s even easier to create that bias.</p>
+                    <p>What is the power of language? Why do we choose a term instead of another? How does media affect our 
+                        perception of different words with same (or to a wider extent very very similar) meaning? And how 
+                        unconsciously biased are we when we choose a word over another?</p>
+                    <p>This is an experimental project that wants to underline how society, media and our own experience of 
+                        the world shape our mind. Often this happens in a very biased manner. Often we discover ourselves 
+                        more racists than we thought.</p>
                 </div>
                 <div class="about-new-survey">
                     <div>
                         <button class="buttonsurvey"><a href="https://forms.gle/YpfafVkfQVxNYBzT9" target="_blank">If you want to reply a few questions about the project or report any issue, click here.</a></button>
                     </div>
-                    <div>
+                    <!-- <div>
                         <button class="buttonsurvey"><a href="https://teachablemachine.withgoogle.com/models/-YQ1QB5p/" target="_blank">If you want to learn how a machine would categorise you, click here.</a></button>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="about-new-contact">
-                    <p>This experiment was conceived and created by me and <a href="https://www.instagram.com/mariaghetti/" target="_blank"><u>Maria Ghetti</u></a>, and made 
+                    <p>This project was conceived and created by <a href="https://www.instagram.com/mariaghetti/" target="_blank"><u>myself</u></a> and curator <a href="https://www.instagram.com/mariaghetti/" target="_blank"><u>Maria Ghetti</u></a>, and made 
                     possible by <a href="https://runwayml.com/" target="_blank"><u>Runway ML</u></a>.
                     For any additional information, question or complaint you can email me <a href="mailto:tiberiomrc@gmail.com" target="_blank"><u>here</u></a>.</p>
                 </div>

@@ -72,11 +72,12 @@ button:focus {
 
 #loader {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 100vw;
     height: 100vh;
-    padding-top: 8%;
+    /* padding: 8%; */
   
     background-color: black;
     color: white;
@@ -87,6 +88,7 @@ button:focus {
   
   .loader-text {
     font-size: 4rem;
+    padding: 10%;
     /* animation: blinker 1s linear infinite; */
   }
   
@@ -135,9 +137,9 @@ button:focus {
     display: none;
     position: absolute;
     right: 0;
-    width: 94.5%;
+    /* width: 94.5%; */
     height: 100%;
-    padding: 1% 4% 2% 2%;
+    padding: 2%;
 
     /* display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -149,6 +151,10 @@ button:focus {
     font-size: 1.2rem;
 
     background-color: black;
+}
+
+.about-new-text {
+    padding-right: 1%;
 }
 
 .form-mobile {
@@ -185,9 +191,9 @@ button:focus {
     background-color: transparent;
 }
 
-.about-new-text {
+/* .about-new-text {
     padding-top: 0.5%;
-}
+} */
 
 .about-new-survey {
     width: 100%;
@@ -196,7 +202,7 @@ button:focus {
     padding-top: 1%;
     padding-bottom: 2%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     grid-column-gap: 2%;
     grid-row-gap: 0px;
@@ -208,6 +214,7 @@ button:focus {
 }
 
 .about-new-survey div button {
+    width: 100%;
     padding-top: 0.5%;
     padding-bottom: 0.5%;
     border-top: 1px solid white;
@@ -256,7 +263,7 @@ button:focus {
     grid-template-rows: 1fr;
     grid-column-gap: 1%;
 
-    width: 94.5%;
+    /* width: 94.5%; */
 
     position: relative;
     bottom: 2%;
