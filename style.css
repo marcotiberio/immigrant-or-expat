@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -53,9 +54,16 @@ button {
 }
 
 button:hover {
+    cursor: default;
+    /* background-color: white;
+    color: black; */
+}
+
+button#right:hover {
     cursor: pointer;
-    background-color: white;
-    color: black;
+    text-decoration: underline;
+    /* background-color: white;
+    color: black; */
 }
 
 button:focus {
@@ -78,21 +86,21 @@ button:focus {
     width: 100vw;
     height: 100vh;
     /* padding: 8%; */
-  
+
     background-color: black;
     color: white;
     text-align: center;
-  
+
     z-index: 5000;
-  }
-  
-  .loader-text {
+}
+
+.loader-text {
     font-size: 4rem;
     padding: 10%;
     /* animation: blinker 1s linear infinite; */
-  }
-  
-  /* @keyframes blinker {
+}
+
+/* @keyframes blinker {
     50% {
       opacity: 0;
     }
@@ -107,7 +115,7 @@ button:focus {
     width: fit-content;
     /* top: 1.5%; */
     right: 1.5%;
-    
+
     text-align: right;
     font-size: 3rem;
     color: white;
@@ -116,17 +124,31 @@ button:focus {
     cursor: pointer;
     z-index: 100;
 
-    text-decoration: blink;
+    /* text-decoration: blink;
     -webkit-animation-name: blinker;
 	-webkit-animation-duration: 1s;
 	-webkit-animation-iteration-count: 6;
 	-webkit-animation-timing-function:ease-in-out;
-	-webkit-animation-direction: alternate;
+	-webkit-animation-direction: alternate; */
 }
 
-@-webkit-keyframes blinker {
+#menu-icon:hover {
+    opacity: 0.7;
+}
+
+/* @-webkit-keyframes blinker {
     from {opacity: 1.0;}
     to {opacity: 0.0;}
+} */
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+background-position: center;
+background-size: cover;
 }
 
 /*--------------------------------------------------------------
@@ -151,10 +173,12 @@ button:focus {
     font-size: 1.2rem;
 
     background-color: black;
+
+    z-index: 5000;
 }
 
 .about-new-text {
-    padding-right: 1%;
+    padding-right: 5%;
 }
 
 .form-mobile {
@@ -183,10 +207,10 @@ button:focus {
     font-family: 'Courier New', Courier, monospace;
     /* font-size: 1.5rem; */
     /* font-weight: 600; */
-    
+
     border: none;
 
-    
+
     color: white;
     background-color: transparent;
 }
@@ -222,12 +246,20 @@ button:focus {
 }
 
 .about-new-contact {
-    padding-bottom: 5%;
+    padding-bottom: 1%;
 }
 
 .about-left-form button {
     font-size: 1.2rem;
     letter-spacing: 0;
+}
+
+.images-grid1 {
+    padding: 1% 0;
+}
+
+.images-grid2 {
+    padding: 1% 0 4% 0;
 }
 
 #gameover {
@@ -271,7 +303,7 @@ button:focus {
 }
 
 #images-immigrant {
-    padding-top: 1%;
+    padding-top: 0.5%;
 }
 
 #images-expat {
@@ -317,10 +349,11 @@ button:focus {
     max-width: 100%;
     position: relative;
     margin: auto;
-  }
-  
-  /* Next & previous buttons */
-  .prev, .next {
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -333,25 +366,25 @@ button:focus {
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
-  }
+}
 
-  .prev {
-      text-decoration: none !important;
-  }
+.prev {
+    text-decoration: none !important;
+}
 
-  .next {
+.next {
     text-decoration: none !;
 }
-  
-  /* Position the "next button" to the right */
-  .next {
+
+/* Position the "next button" to the right */
+.next {
     right: 0;
     border-radius: 3px 0 0 3px;
-  }
+}
 
-  .mySlides img {
+.mySlides img {
     margin: 0 1%;
-  }
+}
 
 /*--------------------------------------------------------------
 ## Game
@@ -420,10 +453,10 @@ button:focus {
     font-family: 'Courier New', Courier, monospace;
     font-size: 3rem;
     font-weight: 600;
-    
+
     border: none;
 
-    
+
     color: white;
     background-color: transparent;
 
@@ -490,7 +523,8 @@ label input[type="radio"] {
 
 @media only screen and (max-width: 900px) {
 
-    html, body {
+    html,
+    body {
         overflow: auto !important;
     }
 
@@ -511,10 +545,10 @@ label input[type="radio"] {
         width: 98vw;
         margin: 0;
         padding: 1%;
-    
+
         font-family: 'Courier New', Courier, monospace;
         font-size: 1em;
-    
+
         background-color: black;
         color: lime;
     }
@@ -531,9 +565,9 @@ label input[type="radio"] {
         grid-template-rows: repeat(2, 1fr);
         grid-column-gap: 0;
         grid-row-gap: 0;
-    
+
         text-align: center;
-    
+
         width: 100vw;
     }
 
@@ -544,16 +578,16 @@ label input[type="radio"] {
         width: 94.5%;
         height: 100%;
         padding: 2% 4% 2% 2%;
-    
+
         /* display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 1fr;
         grid-column-gap: 0;
         grid-row-gap: 0; */
-    
+
         color: white;
         font-size: 1.2rem;
-    
+
         background-color: black;
     }
 
@@ -572,16 +606,16 @@ label input[type="radio"] {
         width: 94.5%;
         height: 100%;
         padding: 2% 4% 2% 2%;
-    
+
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(2, 1fr);
         grid-column-gap: 0;
         grid-row-gap: 0;
-    
+
         color: white;
         font-size: 1rem;
-    
+
         background-color: black;
     }
 
@@ -616,9 +650,9 @@ label input[type="radio"] {
 
     .latent-space {
         display: block;
-        border: 5px solid white; 
-        float: left; 
-        margin-bottom: 2%; 
+        border: 5px solid white;
+        float: left;
+        margin-bottom: 2%;
         margin-right: 1%;
 
         width: 97% !important;
