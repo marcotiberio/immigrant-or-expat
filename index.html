@@ -75,8 +75,7 @@
     <meta name="twitter:card" content="assets/pics/socialmedia-image.png">
 
     <script src="https://kit.fontawesome.com/94ceef780c.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
 
     </head>
 
@@ -85,7 +84,7 @@
             <h3 class="loader-text">Please have look at the pictures and choose the term that best describes the person portrayed</h3>
         </div> -->
 
-        <section class="game">
+        <section class="game" style="display: none;">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide" style="background-image:url(assets/pics/TIBO_0220_MEMORIAL001_web.jpg)"></div>
@@ -121,10 +120,10 @@
         </section>
 
 
-        <div id="about-new" style="display: none; overflow: auto;">
+        <div id="about-new" style="display: block; overflow: auto;">
             <div class="menu">
                 <div id="menu-icon" style="display: block;">
-                    <h6 style="position: fixed; top: 15px; right: 15px; margin-block-start: 0; font-family: 'Arial'; font-weight: normal; font-size: 20px;">✕</h6>
+                    <h6 style="display: none; position: fixed; top: 15px; right: 15px; margin-block-start: 0; font-family: 'Arial'; font-weight: normal; font-size: 20px;">✕</h6>
                 </div>
             </div>
                 <div class="about-new-text">
@@ -179,7 +178,7 @@
                     </div> -->
                 </div>
                 <div class="about-new-contact">
-                    <p>This project was conceived and created by <a href="https://www.instagram.com/mariaghetti/" target="_blank"><u>myself</u></a> and curator <a href="https://www.instagram.com/mariaghetti/" target="_blank"><u>Maria Ghetti</u></a>, and made 
+                    <p>This project was conceived and created by <a href="https://www.instagram.com/faketibo/" target="_blank"><u>myself</u></a> and curator <a href="https://www.instagram.com/mariaghetti/" target="_blank"><u>Maria Ghetti</u></a>, and made 
                     possible by <a href="https://runwayml.com/" target="_blank"><u>Runway ML</u></a>.
                     For any additional information, question or complaint you can email me <a href="mailto:tiberiomrc@gmail.com" target="_blank"><u>here</u></a>.</p>
                 </div>
@@ -298,11 +297,10 @@
             <!-- </div> -->
         </div>
 
-        <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
         <!-- Swiper JS -->
-        <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
         <!-- Initialize Swiper -->
         <script>
