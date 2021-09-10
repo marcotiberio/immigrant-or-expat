@@ -161,7 +161,7 @@ background-size: cover;
     right: 0;
     /* width: 94.5%; */
     height: 100%;
-    padding: 2%;
+    padding: 0 2% 2%;
 
     /* display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -662,7 +662,7 @@ label input[type="radio"] {
     }
 
     .images {
-        display: none;
+        display: block;
     }
 
     .game {
@@ -690,6 +690,16 @@ label input[type="radio"] {
 
         z-index: 2000;
     } */
+
+    .images-grid2 {
+        column-gap: 10px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #about-new {
+        padding: 2% 2%;
+    }
 
 }
 
